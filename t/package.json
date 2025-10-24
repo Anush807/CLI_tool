@@ -1,0 +1,22 @@
+{
+  "name": "t",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "t": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^5.0.2",
+    "args": "^5.0.3",
+    "chalk": "^4.1.2",
+    "path": "^0.12.7",
+    "pkg-up": "^4.0.0"
+  }
+}
