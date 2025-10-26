@@ -1,17 +1,23 @@
 #!/usr/bin/env node
 const arg = require("arg");
 const chalk = require("chalk")
+const getConfig = require("../src/config/config-mgr");
+const start = require("../src/commands/start")
+const logger = require("../src/logger")("bin")
+
 try{
     const args = arg({
     '--start': Boolean,
     '--build': Boolean,
 })
+logger.debug('Received args', args);
 
 if (args['--start']){
-    console.log(chalk.bgCyanBright("starting the app"));
+    const config = getConfig();
+    start(config)
 }
 }catch(e){
-    console.log(chalk.yellow(e.message));
+    logger.warning(e.message);
     console.log();
     usage();
 }
